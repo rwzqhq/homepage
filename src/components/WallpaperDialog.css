@@ -1,0 +1,339 @@
+.wallpaper-custom {
+  display: flex;
+  gap: 16px;
+}
+
+.wallpaper-custom__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: var(--black-alpha-5);
+  color: var(--black-alpha-30);
+}
+
+.wallpaper-custom__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.wallpaper-custom__title {
+  margin: 2px 0 6px;
+  color: var(--pure-black-text-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.wallpaper-custom__desc {
+  margin: 0 0 12px;
+  color: var(--black-alpha-50);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.wallpaper-custom__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wallpaper-link {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.wallpaper-link .text-field {
+  flex: 1;
+}
+
+.wallpaper-link .pill-button {
+  flex: none;
+}
+
+.pill-button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  column-gap: 9px;
+  row-gap: 18px;
+}
+
+.wallpaper-thumb {
+  appearance: none;
+  position: relative;
+  display: block;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--black-alpha-5);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.wallpaper-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.wallpaper-thumb:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px #00000026;
+}
+
+.wallpaper-thumb__check {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 1px 4px #00000040;
+}
+
+.wallpaper-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--black-alpha-10);
+  color: var(--black-alpha-50);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.wallpaper-meta__name {
+  color: var(--pure-black-text-color);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.wallpaper-meta__source {
+  color: var(--black-alpha-30);
+}
+
+@media screen and (max-width: 600px) {
+  .wallpaper-custom {
+    flex-direction: column;
+  }
+
+  .wallpaper-custom__preview {
+    width: 100%;
+  }
+}
+
+/* 必应每日一图 ---------------------------------------------------------- */
+
+.wallpaper-daily {
+  display: flex;
+  gap: 16px;
+}
+
+.wallpaper-daily__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: var(--black-alpha-5);
+  color: var(--black-alpha-30);
+  overflow: hidden;
+}
+
+.wallpaper-daily__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wallpaper-daily__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.wallpaper-daily__status {
+  margin: 0 0 12px;
+  color: var(--black-alpha-30);
+  font-size: 12px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.wallpaper-daily__error {
+  margin: 10px 0 0;
+  color: var(--error-color);
+  font-size: 12px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.wallpaper-daily__hint {
+  margin: 18px 0 10px;
+  color: var(--black-alpha-50);
+  font-size: 12px;
+}
+
+.wallpaper-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  margin-left: 8px;
+  padding: 0 8px;
+  border-radius: 9px;
+  background-color: var(--theme-color-tint);
+  color: var(--theme-color-active);
+  font-size: 11px;
+  font-weight: 400;
+  vertical-align: 1px;
+}
+
+/* 开关 ---------------------------------------------------------------- */
+
+.switch-control {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  padding: 0 12px 0 10px;
+  border: 1px solid var(--black-alpha-15);
+  border-radius: 15px;
+  background-color: transparent;
+  color: var(--pure-black-text-color);
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.switch-control:hover {
+  background-color: var(--black-alpha-5);
+}
+
+.switch-control.is-on {
+  border-color: transparent;
+  background-color: var(--theme-color-tint);
+  color: var(--theme-color-active);
+}
+
+.switch-control__track {
+  position: relative;
+  flex: none;
+  width: 26px;
+  height: 15px;
+  border-radius: 8px;
+  background-color: var(--black-alpha-20);
+  transition: background-color 0.25s;
+}
+
+.switch-control.is-on .switch-control__track {
+  background-color: var(--theme-color);
+}
+
+.switch-control__knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 2px #00000033;
+  transition: transform 0.25s var(--cubic-bezier);
+}
+
+.switch-control.is-on .switch-control__knob {
+  transform: translateX(11px);
+}
+
+.switch-control__label {
+  white-space: nowrap;
+}
+
+.pill-button[aria-pressed='true'] {
+  border-color: transparent;
+  background-color: var(--theme-color-tint);
+  color: var(--theme-color-active);
+}
+
+.is-spinning {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 最近几天的必应图片 ---------------------------------------------------- */
+
+.wallpaper-grid--history {
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+}
+
+.wallpaper-thumb__date {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 1px 6px;
+  border-radius: 7px;
+  background-color: #00000059;
+  color: #fff;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(4px);
+}
+
+.wallpaper-thumb.is-skeleton {
+  background-image: linear-gradient(
+    100deg,
+    var(--black-alpha-5) 20%,
+    var(--black-alpha-10) 40%,
+    var(--black-alpha-5) 60%
+  );
+  background-size: 240% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  cursor: default;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 140% 0;
+  }
+
+  to {
+    background-position: -40% 0;
+  }
+}
+
+.wallpaper-meta__credit {
+  color: var(--black-alpha-50);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+a.wallpaper-meta__credit:hover {
+  color: var(--theme-color-active);
+  text-decoration: underline;
+}

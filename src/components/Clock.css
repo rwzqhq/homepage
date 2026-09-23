@@ -1,0 +1,45 @@
+.clock {
+  --font-size-offset: 28px;
+  --top-offset: 25px;
+
+  appearance: none;
+  position: fixed;
+  top: calc(119px - var(--top-offset));
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-family: var(--fonts-display);
+  font-size: calc(42px + var(--font-size-offset));
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 0 10px #0003;
+  cursor: pointer;
+  transition: color 0.25s, font-weight 0.25s, text-shadow 0.25s, top 0.25s;
+  animation: fade-in 1s;
+}
+
+.clock:active {
+  color: #fff9;
+}
+
+.clock:focus-visible {
+  border-radius: 15px;
+  outline: 3px solid #fff;
+}
+
+.clock__colon {
+  display: inline-block;
+  transform: translateY(-0.1em);
+}
+
+@media screen and (max-width: 600px) {
+  .clock {
+    top: calc(42px - var(--top-offset));
+  }
+}

@@ -1,0 +1,16 @@
+.shortcut-icon {
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}

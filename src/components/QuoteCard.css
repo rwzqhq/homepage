@@ -1,0 +1,124 @@
+.quote {
+  position: fixed;
+  bottom: 125px;
+  left: 50%;
+  width: 600px;
+  padding: 15px 50px;
+  border-radius: 15px;
+  color: #ffffffe6;
+  font-size: 16px;
+  text-align: center;
+  cursor: default;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+  animation: fade-in 1s;
+}
+
+.quote.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.quote__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--white-alpha-10);
+  backdrop-filter: var(--universal-backdrop-filter);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.quote:hover .quote__bg,
+.quote:hover .quote__menu-button,
+.quote:hover .quote__author {
+  opacity: 1;
+}
+
+.quote__text {
+  text-shadow: 0 0 20px #000c;
+  transition: all 0.25s;
+}
+
+.quote:hover .quote__text {
+  text-shadow: 0 0 20px #0000;
+}
+
+.quote__text span:first-of-type {
+  margin-right: 5px;
+}
+
+.quote__text span:last-of-type {
+  margin-left: 5px;
+}
+
+.quote__author {
+  margin-top: 8px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+.quote__menu-button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff9;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+.quote__menu-button:hover {
+  color: #ffffffe6;
+  background-color: #ffffff0d;
+}
+
+.quote__menu-button:active {
+  background-color: #ffffff26;
+}
+
+.quote__menu {
+  position: absolute;
+  top: 34px;
+  right: 6px;
+  z-index: 3;
+  animation: fade-in-scale 0.25s var(--cubic-bezier) forwards;
+  transform-origin: right top;
+}
+
+@media screen and (max-height: 550px) and (min-width: 600px) {
+  .quote {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .quote {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .quote {
+    width: 90%;
+  }
+}

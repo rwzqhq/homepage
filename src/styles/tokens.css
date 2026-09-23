@@ -1,0 +1,100 @@
+/* Design tokens mirrored from the reference start page (qingning / limestart.cn) */
+:root {
+  --theme-color: var(--theme-color-lime);
+  --theme-color-active: #61a600;
+  --theme-color-tint: #70c0001a;
+  --selection-color: #70c00059;
+  --theme-color-blue: #5ca1ff;
+  --theme-color-indigo: #4cb6c2;
+  --theme-color-lime: #70c000;
+  --theme-color-rose: #ff4b68;
+  --theme-color-tint-rose: #ff4b681a;
+  --theme-color-violet: #bb8cdd;
+
+  --black-alpha-5: #0000000d;
+  --black-alpha-10: #0000001a;
+  --black-alpha-15: #00000026;
+  --black-alpha-20: #0003;
+  --black-alpha-30: #0000004d;
+  --black-alpha-35: #00000059;
+  --black-alpha-50: #00000080;
+  --black-alpha-60: #0009;
+  --black-alpha-70: #000000b3;
+  --black-alpha-80: #000c;
+  --black-alpha-90: #000000e6;
+  --black-tip-text-color: #000c;
+
+  --off-white-background-color: #ebebeb;
+  --primary-background-color: white;
+  --primary-background-color-hover: #fafafa;
+  --pure-black-background-color: black;
+  --pure-black-text-color: black;
+  --pure-white-background-color: white;
+  --pure-white-text-color: white;
+  --secondary-background-color: #f5f5f5;
+
+  --white-alpha-5: #ffffff0d;
+  --white-alpha-10: #ffffff1a;
+  --white-alpha-15: #ffffff26;
+  --white-alpha-20: #fff3;
+  --white-alpha-25: #ffffff40;
+  --white-alpha-30: #ffffff4d;
+  --white-alpha-50: #ffffff80;
+  --white-alpha-60: #fff9;
+  --white-alpha-70: #ffffffb3;
+  --white-alpha-80: #fffc;
+  --white-alpha-90: #ffffffe6;
+  --white-background-color-active: #d7d7d7;
+  --white-background-color-hover: white;
+
+  --cubic-bezier: cubic-bezier(0.65, 0.05, 0.1, 1);
+  --error-color: #ff655e;
+  --fonts: "PingFang SC", "Microsoft Yahei", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+  --fonts-display: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei",
+    "Segoe UI Variable Display", "Segoe UI", Roboto, system-ui, "Noto Sans", Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  --universal-backdrop-filter: blur(30px) saturate(1.25);
+  --universal-border: none;
+  --universal-box-shadow: 0 15px 30px #00000040;
+}
+
+.dark {
+  --black-alpha-5: #ffffff0d;
+  --black-alpha-10: #ffffff1a;
+  --black-alpha-15: #ffffff26;
+  --black-alpha-20: #fff3;
+  --black-alpha-30: #ffffff4d;
+  --black-alpha-35: #ffffff59;
+  --black-alpha-50: #ffffff80;
+  --black-alpha-60: #fff9;
+  --black-alpha-70: #ffffffb3;
+  --black-alpha-80: #fffc;
+  --black-alpha-90: #ffffffe6;
+  --black-tip-text-color: #ffffff80;
+
+  --off-white-background-color: #1e1e1e;
+  --primary-background-color: #282828;
+  --primary-background-color-hover: #323232;
+  --pure-black-background-color: white;
+  --pure-black-text-color: white;
+  --pure-white-background-color: #1e1e1e;
+  --pure-white-text-color: black;
+  --secondary-background-color: #1e1e1e;
+
+  --white-alpha-5: #0000000d;
+  --white-alpha-10: #0000001a;
+  --white-alpha-15: #00000026;
+  --white-alpha-20: #0003;
+  --white-alpha-25: #00000040;
+  --white-alpha-30: #0000004d;
+  --white-alpha-50: #1e1e1e80;
+  --white-alpha-60: #0009;
+  --white-alpha-70: #1e1e1eb3;
+  --white-alpha-80: #1e1e1ecc;
+  --white-alpha-90: #1e1e1ee6;
+  --white-background-color-active: #323232;
+  --white-background-color-hover: #282828;
+  --universal-border: 1px solid #ffffff0d;
+  --universal-box-shadow: 0 10px 30px #00000080;
+  color-scheme: dark;
+}

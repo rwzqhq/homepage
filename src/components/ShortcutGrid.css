@@ -1,0 +1,134 @@
+.shortcut-view {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 300px;
+  overflow-y: auto;
+  animation: fade-in 0.35s;
+}
+
+.shortcut-view__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  column-gap: 50px;
+  row-gap: 22px;
+}
+
+.shortcut-view__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.tile--large {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  background-color: var(--white-alpha-20);
+  backdrop-filter: blur(30px) saturate(1.5);
+}
+
+.tile--large:hover {
+  background-color: var(--off-white-background-color);
+}
+
+.tile--add {
+  border: 1px solid var(--white-alpha-30);
+  background-color: var(--white-alpha-5);
+  color: var(--white-alpha-70);
+}
+
+.tile--add:hover {
+  background-color: var(--white-alpha-15);
+  color: #fff;
+}
+
+.shortcut-view__label {
+  max-width: 130px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+}
+
+.shortcut-view__menu-button {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--black-alpha-50);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.25s;
+  z-index: 2;
+}
+
+.shortcut-view__item:hover .shortcut-view__menu-button,
+.shortcut-view__menu-button:focus-visible {
+  opacity: 1;
+}
+
+.shortcut-view__menu-button:hover {
+  background-color: var(--black-alpha-70);
+}
+
+.shortcut-view__menu {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  z-index: 3;
+  transform: translateX(-50%);
+  animation: fade-in-scale 0.25s var(--cubic-bezier) forwards;
+}
+
+@media screen and (max-width: 900px) {
+  .shortcut-view__grid {
+    grid-template-columns: repeat(4, 80px);
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .shortcut-view {
+    padding: 120px 16px 220px;
+  }
+
+  .shortcut-view__grid {
+    grid-template-columns: repeat(3, 60px);
+    column-gap: 26px;
+    row-gap: 20px;
+  }
+
+  .tile--large {
+    width: 60px;
+    height: 60px;
+    border-radius: 13px;
+  }
+
+  .shortcut-view__label {
+    max-width: 90px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shortcut-view__grid {
+    grid-template-columns: repeat(3, 56px);
+    column-gap: 18px;
+  }
+}

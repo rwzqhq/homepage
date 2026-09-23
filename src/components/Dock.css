@@ -1,0 +1,102 @@
+.dock {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  display: flex;
+  max-width: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--white-alpha-10);
+  box-shadow: 0 0 10px #0003;
+  backdrop-filter: var(--universal-backdrop-filter);
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(-50%);
+  transition: all 0.25s;
+  z-index: 2;
+  animation: fade-in 1s;
+}
+
+.dock > * {
+  flex-shrink: 0;
+}
+
+.dock > *:not(:first-child) {
+  margin-left: 10px;
+}
+
+.dock__slot {
+  position: relative;
+  border-radius: 10px;
+  transition: opacity 0.2s;
+}
+
+.dock__slot.is-over {
+  opacity: 0.55;
+}
+
+.tile {
+  appearance: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--off-white-background-color);
+  cursor: pointer;
+  outline-offset: 2px;
+  transition: background-color 0.35s;
+}
+
+.tile:hover {
+  background-color: var(--white-background-color-hover);
+}
+
+.tile:active {
+  background-color: var(--white-background-color-active);
+}
+
+.tile:focus-visible {
+  outline: 2px solid #fff;
+}
+
+.dock__tooltip {
+  position: fixed;
+  z-index: 4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #000000bf;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate(-50%, calc(-100% - 26px));
+  animation: fade-in 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .dock {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .dock::-webkit-scrollbar {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tile {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dock__tooltip {
+    display: none;
+  }
+}
